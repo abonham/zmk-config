@@ -8,6 +8,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define _DEFAULT 0
+#define _LOWER 1
+#define _RAISE 2
+#define _TRI 3
 
 &mt {
   flavor = "tap-preferred";
@@ -46,9 +50,7 @@
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&kp LGUI>;
-        };
-        
-        
+        }; 
            combo_rgui {
             timeout-ms = <50>;
             key-positions = <17 18>;
@@ -67,7 +69,7 @@
 		&kp Q &kp W &kp E &kp R &kp T 						&kp Y &kp U &kp I &kp O &kp P 
 		&kp A &kp S &kp D &kp F &kp G 			            &kp H &kp J &kp K &kp L &kp SCLN
 		&mt LSFT Z &kp X &kp C &kp V &kp B				    &kp N &kp M  &kp CMMA &kp DOT &mt LSFT RET
-          				&mo 1 &mt LGUI SPC  				        &mt LGUI BKSP &mo 2 
+          				&lt _LOWER ESC &mt LGUI SPC  				        &mt LGUI BKSP &lt _RAISE RET
 		>;
 		};
          
