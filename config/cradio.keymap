@@ -56,6 +56,7 @@
             key-positions = <17 18>;
             bindings = <&kp RGUI>;
         };
+    };
         
     behaviors {
         td0: tap_dance_0 {
@@ -66,9 +67,7 @@
             bindings = <&kp SQT>, <&kp SCLN>;
         };
     };
-        
-    };
-
+    
         keymap {
                 compatible = "zmk,keymap";
                 
