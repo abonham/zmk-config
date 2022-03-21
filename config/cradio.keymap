@@ -76,7 +76,7 @@
 		bindings = <
 		&kp Q &kp W &kp E &kp R &kp T 						    &kp Y &kp U &kp I &kp O &kp P 
 		&mt LSFT A &kp S &kp D &kp F &kp G 			            &kp H &kp J &kp K &kp L &td0
-		&mt LS(LGUI) Z &mt LCTL X &mt LALT C &kp V &kp B	    &kp N &kp M  &kp CMMA &kp DOT &mt LA(LC(LGUI)) FSLH
+		&mt LS(LGUI) Z &mt LCTL X &mt LALT C &kp V &kp B	    &kp N &kp M &mt RCTL CMMA &mt RALT DOT &mt LA(LC(LGUI)) FSLH
           				&lt 1 ESC &mt LGUI SPC  				&mt LGUI BKSP &lt 2 RET
 		>;
 		};
