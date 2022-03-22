@@ -95,23 +95,23 @@
             >;
         };
          
-        right_layer {
-            bindings = <
-                &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT           &kp CRRT  &kp AMPS &kp STAR &kp LPRN &kp RPRN 
-                &kp TAB  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 	      &kp LEFT &kp DOWN &kp UP  &kp RIGHT &kp UNDER 
-                &kp GRAVE  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH          &kp MINUS &kp KP_EQUAL &kp LBRC &kp RBRC &kp BKSP
-                &mo 3 &kp LGUI  	                                      &kp RGUI  &none
-            >;
-        };	
-        
         left_layer {
             bindings = <
-                &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5        &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
+                &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT          &kp CRRT  &kp AMPS &kp STAR &kp LPRN &kp RPRN 
                 &kp TAB &kp SQT &kp DQT &kp PIPE &kp HASH                &kp MINUS &kp EQL &kp PLUS &kp LBRC &kp RBRC
                 &kp GRAVE &kp TILDE &kp BSLH &kp HASH &kp TAB 	         &kp GRAVE &kp MINUS &kp UNDER &kp LBKT &kp RBKT
                 &none  &kp LGUI  					                     &kp RGUI &mo 3 
             >;
         };
+        
+        right_layer {
+            bindings = <
+                &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5         &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
+                &kp TAB  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 	      &kp LEFT &kp DOWN &kp UP  &kp RIGHT &kp UNDER 
+                &kp GRAVE  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH          &kp MINUS &kp KP_EQUAL &kp LBRC &kp RBRC &kp BKSP
+                &mo 3 &kp LGUI  	                                      &kp RGUI  &none
+            >;
+        };	
         
         tri_layer {
             bindings = <
