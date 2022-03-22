@@ -97,7 +97,7 @@
          
         left_layer {
             bindings = <
-                &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT          &kp CRRT  &kp AMPS &kp STAR &kp LPRN &kp RPRN 
+                &kp BANG  &kp ATSN &kp HASH &kp DLLR &kp PRCT          &kp CRRT &kp AMPS &kp STAR &kp LPRN &kp RPRN 
                 &kp TAB &kp SQT &kp DQT &kp PIPE &kp HASH                &kp MINUS &kp EQL &kp PLUS &kp LBRC &kp RBRC
                 &kp GRAVE &kp TILDE &kp BSLH &kp HASH &kp TAB 	         &kp GRAVE &kp MINUS &kp UNDER &kp LBKT &kp RBKT
                 &none  &kp LGUI  					                     &kp RGUI &mo 3 
@@ -117,7 +117,7 @@
             bindings = <
                 &kp PAGE_UP &kp C_VOLUME_UP &trans &trans &td0        		      &kp KPLS &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp MINUS
                 &kp PAGE_DOWN &kp C_VOLUME_DOWN &kp C_PLAY_PAUSE &kp F4 &kp F5    &kp NUM_0 &kp NUM_4  &kp NUM_5 &kp NUM_6 &kp DOT 
-                &trans &trans &trans &trans &trans                                &trans &kp NUM_1  &kp NUM_2  &kp NUM_3 &KP_EQUAL   
+                &trans &trans &trans &trans &trans                                &trans &kp NUM_1  &kp NUM_2  &kp NUM_3 &kp KP_EQUAL   
                 &trans &trans  					                                  &trans &mo 4 
             >;
         };
@@ -126,7 +126,7 @@
             bindings = <
                 &reset &trans &trans &trans &bootloader        		              &reset &trans &trans &trans &bootloader
                 &trans &trans &trans &trans &trans                                &trans &trans &trans &trans &trans 
-                &bt BT_CLR  &bt BT_NXT &bt BT_PRV &out OUT_BLE &out OUT_USB       &trans &trans &trans &trans &trans   
+                &bt BT_CLR &bt BT_NXT &bt BT_PRV &out OUT_BLE &out OUT_USB        &trans &trans &trans &trans &trans   
                 &trans &trans  					                                  &trans &trans 
             >;
         };
