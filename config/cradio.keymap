@@ -10,14 +10,17 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define LOWER 1
-#define RAISE 2
-#define TRI 3
+#define SYMBOLS 1
+#define NUMBERS 2
+#define FUNCTIONS 3
+#define DANGER 4
+#define WINDOWS 5
+#define GAME 6
 
 &mt {
   flavor = "tap-preferred";
   tapping_term_ms = <200>;
-  quick-tap-ms = <150>;
+  quick-tap-ms = <175>;
 };
 
 &caps_word {
@@ -88,48 +91,65 @@
                 
         default_layer {
             bindings = <
-                &kp Q &kp W &kp E &kp R &kp T 						    &kp Y &kp U &kp I &kp O &kp P 
-                &mt LSFT A &kp S &kp D &kp F &kp G 			            &kp H &kp J &kp K &kp L &mt RSFT SQT
-                &mt LS(LGUI) Z &mt LCTL X &mt LALT C &kp V &kp B	    &kp N &kp M &mt RCTL CMMA &mt RALT DOT &mt LA(LC(LGUI)) FSLH
-                &lt 1 ESC &mt LGUI SPC  				                &mt RGUI BKSP &lt 2 RET
+                &kp Q &kp W &kp E &kp R &kp T 						                &kp Y &kp U &kp I &kp O &kp P 
+                &mt LSFT A &kp S &kp D &kp F &kp G 			                        &kp H &kp J &kp K &kp L &mt RSFT SQT
+                &mt LS(LGUI) Z &mt LCTL X &mt LALT C &kp V &kp B	                &kp N &kp M &mt RALT CMMA &mt RCTL DOT &mt LA(LC(LGUI)) FSLH
+                &lt SYMBOLS ESC &mt LGUI SPC  				                        &mt RGUI BKSP &lt NUMBERS RET
             >;
         };
          
         left_layer {
             bindings = <
-                &kp BANG  &kp ATSN &kp HASH &kp DLLR &kp PRCT          &kp CRRT &kp AMPS &kp STAR &kp LPRN &kp RPRN 
-                &kp TAB &kp SQT &kp DQT &kp PIPE &kp HASH                &kp MINUS &kp EQL &kp PLUS &kp LBRC &kp RBRC
-                &kp GRAVE &kp TILDE &kp BSLH &kp HASH &kp TAB 	         &kp GRAVE &kp MINUS &kp UNDER &kp LBKT &kp RBKT
-                &none  &kp LGUI  					                     &kp RGUI &mo 3 
+                &kp BANG  &kp ATSN &kp HASH &kp DLLR &kp PRCT                       &kp CRRT &kp AMPS &kp STAR &kp LPRN &kp RPRN 
+                &kp TAB &kp SQT &kp DQT &kp PIPE &kp HASH                           &kp MINUS &kp EQL &kp PLUS &kp LBRC &kp RBRC
+                &kp GRAVE &kp TILDE &kp BSLH &kp HASH &kp TAB 	                    &kp GRAVE &kp MINUS &kp UNDER &kp LBKT &kp RBKT
+                &none  &kp LGUI  					                                &kp RGUI &mo FUNCTIONS 
             >;
         };
         
         right_layer {
             bindings = <
-                &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5         &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
-                &kp TAB  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 	      &kp LEFT &kp DOWN &kp UP  &kp RIGHT &kp UNDER 
-                &kp GRAVE  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH          &kp MINUS &kp KP_EQUAL &kp LBRC &kp RBRC &kp BKSP
-                &mo 3 &kp LGUI  	                                      &kp RGUI  &none
+                &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5                   &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
+                &kp TAB  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 	                &kp LEFT &kp DOWN &kp UP  &kp RIGHT &kp UNDER 
+                &kp GRAVE  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH                    &kp MINUS &kp KP_EQUAL &kp LBRC &kp RBRC &kp BKSP
+                &mo FUNCTIONS &kp LGUI  	                                        &kp RGUI  &none
             >;
         };	
         
         tri_layer {
             bindings = <
-                &kp PAGE_UP &kp C_VOLUME_UP &trans &trans &td0        		      &kp KPLS &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp MINUS
-                &kp PAGE_DOWN &kp C_VOLUME_DOWN &kp C_PLAY_PAUSE &kp F4 &kp F5    &kp NUM_0 &kp NUM_4  &kp NUM_5 &kp NUM_6 &kp DOT 
-                &trans &trans &trans &trans &trans                                &trans &kp NUM_1  &kp NUM_2  &kp NUM_3 &kp KP_EQUAL   
-                &trans &trans  					                                  &mo 4 &trans 
+                &kp PAGE_UP &kp C_VOLUME_UP &trans &trans &tog WINDOWS     		    &kp KPLS &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp MINUS
+                &kp PAGE_DOWN &kp C_VOLUME_DOWN &kp C_PLAY_PAUSE &kp F4 &kp F5      &kp NUM_0 &kp NUM_4  &kp NUM_5 &kp NUM_6 &kp DOT 
+                &trans &trans &trans &trans &tog GAME                               &trans &kp NUM_1  &kp NUM_2  &kp NUM_3 &kp KP_EQUAL   
+                &trans &trans  					                                    &mo DANGER &trans 
             >;
         };
         
         dangerous_layer {
             bindings = <
-                &reset &trans &trans &trans &bootloader        		              &reset &trans &trans &trans &bootloader
-                &trans &trans &trans &trans &trans                                &trans &trans &trans &trans &trans 
-                &bt BT_CLR &bt BT_NXT &bt BT_PRV &out OUT_BLE &out OUT_USB        &trans &trans &trans &trans &trans   
-                &trans &trans  					                                  &trans &trans 
+                &reset &trans &bt BT_CLR &trans &bootloader        		            &reset &trans &trans &trans &bootloader
+                &trans &trans &trans &trans &trans                                  &trans &trans &trans &trans &trans 
+                &trans &bt BT_NXT &bt BT_PRV &out OUT_BLE &out OUT_USB              &trans &trans &trans &trans &trans   
+                &trans &trans  					                                    &trans &trans 
             >;
         };
-         
+
+        windows_layer {
+            bindings = <
+                &kp Q &kp W &kp E &kp R &kp T 						                &kp Y &kp U &kp I &kp O &kp P 
+                &mt LSFT A &kp S &kp D &kp F &kp G 			                        &kp H &kp J &kp K &kp L &mt RSFT SQT
+                &kp Z &mt LCTL X &mt LALT C &kp V &kp B	                            &kp N &kp M &mt RALT CMMA &mt RCTL DOT &kp FSLH
+                &lt SYMBOLS ESC &kp SPC  				                            &kp BKSP &lt NUMBERS ENTER
+            >;
+        };
+
+        game_layer {
+            bindings = <
+                &kp ESC &kp Q &kp W &kp E &kp R                                     &kp T &kp U &kp U &kp I &kp BKSP
+                &kp TAB &kp A &kp S &kp D &kp F                                     &kp G &kp H &kp J &kp K &kp ENTER
+                &kp LSFT &kp Z &kp X &kp C &kp V 	                                &kp B &kp N &kp M &mt RCTL CMMA &mo FUNCTIONS
+                &kp LCTL &kp SPC  				                                    &kp SPC &LALT
+            >;
+        };
     };
 };
