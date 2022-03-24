@@ -68,13 +68,13 @@
         };
 
         combo_windows {
-            timeout = <75>;
+            timeout-ms = <75>;
             key-positions = <0 9>;
             bindings = <&tog WINDOWS>;
         };
 
         combo_game {
-            timeout = <75>;
+            timeout-ms = <75>;
             key-positions = <1 8>;
             bindings = <&tog GAME>;
         };
