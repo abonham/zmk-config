@@ -31,21 +31,21 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <75>;
+        combo_gui {
+            timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&kp GRAVE>;
+            bindings = <&kp LGUI>;
         };
         
         combo_minus {
             timeout-ms = <33>;
-            key-positions = <6 7>;
+            key-positions = <6 9>;
             bindings = <&kp MINUS>;
         };
         
         combo_equal {
             timeout-ms = <33>;
-            key-positions = <7 8>;
+            key-positions = <7 9>;
             bindings = <&kp EQL>;
         }; 
         
