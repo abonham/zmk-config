@@ -121,9 +121,9 @@
 
         symbols_layer {
             bindings = <
-                &kp BANG  &kp ATSN &kp HASH &kp DLLR &kp PRCT                       &kp CRRT &kp AMPS &kp STAR &kp LPRN &kp RPRN
-                &kp TAB &kp SQT &kp DQT &kp PIPE &kp HASH                           &kp MINUS &kp EQL &kp PLUS &kp LBRC &kp RBRC
-                &kp GRAVE &kp TILDE &kp BSLH &kp HASH &kp TAB 	                    &kp INS &kp MINUS &kp UNDER &kp LBKT &kp RBKT
+                &kp GRAVE  &kp ATSN &kp HASH &kp DLLR &kp PRCT                      &kp CRRT &kp AMPS &kp STAR &kp LPRN &kp RPRN
+                &kp TAB &kp SQT &kp DQT &kp UNDER &kp PIPE                           &kp MINUS &kp EQL &kp PLUS &kp LBRC &kp RBRC
+                &kp TILDE &kp FSLH &kp BSLH &kp QMARK &kp BANG 	                    &kp INS &kp MINUS &kp UNDER &kp LBKT &kp RBKT
                 &none  &kp LGUI  					                                &mt RGUI DEL &mo FUNCTIONS
             >;
         };
