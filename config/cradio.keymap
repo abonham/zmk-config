@@ -24,7 +24,7 @@
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS>;
+    continue-list = <UNDERSCORE MINUS BKSP>;
 };
 
 / {
@@ -96,6 +96,14 @@
             tapping-term-ms = <200>;
             bindings = <&kp BKSP>, <&kp RGUI>;
         };
+        
+        graq: grave_replace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_REPLACE";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp GRAVE>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
     keymap {
@@ -103,7 +111,7 @@
 
         default_layer {
             bindings = <
-                &kp Q &kp W &kp E &kp R &kp T 						                &kp Y &kp U &kp I &kp O &kp P
+                &graq &kp W &kp E &kp R &kp T 						                &kp Y &kp U &kp I &kp O &kp P
                 &mt LSFT A &kp S &kp D &kp F &kp G 			                        &kp H &kp J &kp K &kp L &mt RSFT SQT
                 &mt LS(LGUI) Z &mt LCTL X &mt LALT C &kp V &kp B	                &kp N &kp M &mt RALT CMMA &mt RCTL DOT &mt LA(LC(LGUI)) FSLH
                 &lt SYMBOLS ESC &mt LGUI SPC  				                        &mt RGUI BKSP &lt NUMBERS RET
